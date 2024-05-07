@@ -62,15 +62,15 @@ TEST_F(AlgorithmSortTest, SelectionSortTest) {
   time_.PrintElapsedTime();
 }
 
-TEST_F(AlgorithmSortTest, SelectionSortTest) {
-  std::cout << "Before SelectionSort, the vector is ";
+TEST_F(AlgorithmSortTest, InsertionSortTest) {
+  std::cout << "Before InsertionSort, the vector is ";
   PrintValue(sort_small_test_vec_);
-  sorter_.SelectionSort(&sort_small_test_vec_);
-  std::cout << "After SelectionSort, the vector is ";
+  sorter_.InsertionSort(&sort_small_test_vec_);
+  std::cout << "After InsertionSort, the vector is ";
   PrintValue(sort_small_test_vec_);
 
-  time_.StartTimer("SelectionSort");
-  sorter_.SelectionSort(&sort_large_test_vec_);
+  time_.StartTimer("InsertionSort");
+  sorter_.InsertionSort(&sort_large_test_vec_);
   time_.StopTimer();
   time_.PrintElapsedTime();
 }
