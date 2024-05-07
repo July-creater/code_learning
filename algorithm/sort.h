@@ -43,12 +43,17 @@ class Sort {
 
   // 插入排序，类似于抓牌的过程，每抓一张新的排，就会将牌插入到已经排序好的牌组中合适的位置
   void InsertionSort(std::vector<ValueType>* const value_vec) {
-    
     const int32_t size = value_vec->size();
-    for (int32_t i = 0; i < )
-    
+    for (int32_t i = 1; i < size; ++i) {
+      ValueType temp = value_vec->at(i);
+      int32_t j = i - 1;
+      while (j >= 0 && value_vec->at(j) > temp) {
+        value_vec->at(j + 1) = value_vec->at(j);
+        --j;
+      }
+      value_vec->at(j + 1) = temp;
+    }
   }
-
 
 
 
