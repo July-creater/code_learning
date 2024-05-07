@@ -1,7 +1,9 @@
-#include <vector>
-#include <iostream>
+#pragma once
 
-namespace LeeCode {
+#include <iostream>
+#include <vector>
+
+namespace DataStructure {
 namespace Tree {
 
 template <typename ValueType>
@@ -28,21 +30,18 @@ class BinaryTree {
   std::vector<ValueType> PreOrder(TreeNode* root) {
     std::vector<ValueType> res;
     PreOrderTraversal(root, &res);
-    std::cout << "res size is " << res.size() << std::endl;
     return res;
   }
 
   std::vector<ValueType> InOrder(TreeNode* root) {
     std::vector<ValueType> res;
     InOrderTraversal(root, &res);
-    std::cout << "res size is " << res.size() << std::endl;
     return res;
   }
 
   std::vector<ValueType> PostOrder(TreeNode* root) {
     std::vector<ValueType> res;
     PostOrderTraversal(root, &res);
-    std::cout << "res size is " << res.size() << std::endl;
     return res;
   }
 
@@ -98,4 +97,4 @@ class BinaryTree {
 };
 
 }  // namespace Tree
-}  // namespace LeeCode
+}  // namespace DataStructure
